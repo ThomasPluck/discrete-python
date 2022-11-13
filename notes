@@ -1,0 +1,11 @@
+1. The Dead Cell Phenomenon
+
+An interesting accidental discovery: instead of requiring weight blame counters to actually be unsigned - if you instead let them be infinitely decremented by the forgiveness counter - they'll eventually run down the capacity of a blame attribution to *ever* flip the weight.
+
+Which can be interpreted as, if there are no signficant reasons to flip weights in initial training, they can just be left unflipped and will probably be trained correctly.
+
+In the case of the perceptron the network will actually perform *better* with dead cells and even converge requiring only a single blame bit - which is a really interesting discovery, although, there is a clear drawback that it will kill networks with more complex dynamics where dead cells can lead to convergence issues.
+
+2. Dynamic Forgiveness Counters?
+
+A simple update to the counting mechanism is to simply only tick the clock when a correct prediction is made, there's nothing to be learnt - we have to walk back the evidence. Or perhaps, only tick the clock when an incorrect prediction is made as this is when we know that errors will be accumulating.
