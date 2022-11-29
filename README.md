@@ -1,4 +1,4 @@
-This folder provides a complete explanation and demonstration of the mathematics behind Discrete Backpropagation mechanism of proposed TeensyFlow Algorithms.
+This folder provides a complete explanation and demonstration of the mathematics behind the Discrete Backpropagation mechanism.
 
 For full understanding, they are best read in the order provided in the folder.
 
